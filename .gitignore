@@ -39,8 +39,6 @@ $RECYCLE.BIN/
 #-------------------------
 # Environment Files
 #-------------------------
-# These should never be under version control,
-# as it poses a security risk.
 .env
 .vagrant
 Vagrantfile
@@ -77,8 +75,6 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 # Test Files
 #-------------------------
 tests/coverage*
-
-# Don't save phpunit under version control.
 phpunit
 
 #-------------------------
@@ -89,11 +85,7 @@ vendor/
 #-------------------------
 # IDE / Development Files
 #-------------------------
-
-# Modules Testing
 _modules/*
-
-# phpenv local config
 .php-version
 
 # Jetbrains editors (PHPStorm, etc)
@@ -122,5 +114,22 @@ _modules/*
 # Visual Studio Code
 .vscode/
 
+# PHPUnit
 /results/
 /phpunit*.xml
+
+#-------------------------
+# Tambahan dari Remote GitHub
+#-------------------------
+*/config/development
+*/logs/log-*.php
+!*/logs/index.html
+*/cache/*
+!system/cache/*
+!*/cache/index.html
+!*/cache/.htaccess
+
+# CodeIgniter 3 logs
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
